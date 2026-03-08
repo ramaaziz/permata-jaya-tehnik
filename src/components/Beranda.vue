@@ -569,13 +569,21 @@
           align="center"
           justify="center"
         >
-          <v-col cols="4">
+          <v-col
+            cols="12"
+            sm="6"
+            md="4"
+          >
             <div class="text-center">
-              <h2 class="text-xl font-mono font-black mb-4 tracking-tight">
+              <h2
+                class="text-h6 text-md-h5 text-sm-h2 font-mono font-weight-black mb-3"
+              >
                 PT PERMATA JAYA TEHNIK
               </h2>
 
-              <p class="text-md italic font-mono font-medium leading-relaxed">
+              <p
+                class="text-caption text-md-body-1 italic font-mono leading-relaxed"
+              >
                 RUKOBUMIMASKENCANA <br />
                 JL. TERUSAN JAKARTA, RUKO PURI DAGO <br />
                 KAV B NO.6 RT007 RW015 SUKAMISKIN <br />
