@@ -603,7 +603,6 @@ const dialog3 = ref(false);
 const goTo = useGoTo();
 const scrollToBottom = () => {
   goTo(document.body.scrollHeight, {
-    behavior: "smooth",
     duration: 500,
     easing: "easeInOutCubic",
   });
