@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full fluid pa-0 justify-center">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 justify-center">
     <v-app-bar theme="light">
       <v-app-bar-nav-icon>
         <v-img
@@ -20,27 +20,31 @@
     <v-main>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <v-card
-          class="mt-18 d-flex align-center max-w-full"
-          flat
-          height="450"
+          class="mt-16 d-flex align-center max-w-full mx-auto shadow-2xl"
           image="@/assets/Grid2.png"
           rounded="3xl"
+          :height="$vuetify.display.mdAndUp ? 450 : 150"
         >
+          >
           <v-row
             align="center"
             class="ma-0 fill-height"
           >
             <v-col
-              class="pl-10 pt-40"
+              class="px-4 py-10 pl-md-10 pt-md-40"
               cols="12"
               md="6"
             >
-              <div class="text-black">
-                <h2 class="text-xl font-mono font-black mb-4 tracking-tight">
+              <div class="text-black hidden md:block">
+                <h2
+                  class="text-xl font-mono font-black mb-4 tracking-tight md:block sm:block"
+                >
                   PT PERMATA JAYA TEHNIK
                 </h2>
 
-                <p class="text-md italic font-mono font-medium leading-relaxed">
+                <p
+                  class="text-sm text-md-md italic font-mono font-medium leading-relaxed hidden-sm-and-down"
+                >
                   Menghubungkan Energi, Membangun Negeri.<br />
                   Kami adalah mitra terpercaya dalam bidang<br />
                   Jasa Konstruksi dan Perdagangan Umum,<br />
@@ -101,10 +105,6 @@
               rounded="xl"
               @click="dialog1 = true"
             >
-              <!-- <v-parallax
-              class="d-flex flex-column align-center justify-center"
-              src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-            > -->
               <v-avatar
                 class="mb-4 mt-2"
                 color="blue-darken-4"
@@ -127,7 +127,6 @@
                 memenuhi kebutuhan klien melalui sistem manajemen kualitas yang
                 efektif.
               </v-card-text>
-              <!-- </v-parallax> -->
             </v-card>
           </v-col>
 
@@ -280,7 +279,8 @@
             aspect-ratio="16/9"
             class="rounded-xl mx-auto"
             cycle
-            height="800"
+            max-height="800"
+            height="fit-content"
             progress="primary"
             show-arrows="hover"
             width="fit-content"
