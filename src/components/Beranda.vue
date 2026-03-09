@@ -601,7 +601,7 @@
               </h2>
 
               <p
-                class="text-caption text-md-body-1 italic font-mono leading-relaxed"
+                class="text-caption text-md-body-1 italic font-mono leading-relaxed mb-10"
               >
                 RUKO BUMI MAS KENCANA <br />
                 JL. TERUSAN JAKARTA, RUKO PURI DAGO <br />
@@ -610,7 +610,7 @@
                 022 – 63196046 <br />
                 <br />
                 permatajayatehnik2019@gmail.com <br />
-                permatajayatehnik89@gmail.com
+                permatajayatehnik89@gmail.com <br />
               </p>
             </div>
           </v-col>
