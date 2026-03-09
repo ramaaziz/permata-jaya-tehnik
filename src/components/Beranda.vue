@@ -280,7 +280,6 @@
             class="rounded-xl mx-auto"
             cycle
             :height="$vuetify.display.mdAndUp ? 750 : 250"
-            height="fit-content"
             progress="primary"
             show-arrows="hover"
             width="fit-content"
@@ -580,7 +579,6 @@
               width="100%"
               :height="$vuetify.display.mdAndUp ? 350 : 150"
               style="border: 0"
-              allowfullscreen=""
               loading="lazy"
               class="rounded-xl shadow-lg mb-6"
             ></iframe>
