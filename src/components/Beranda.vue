@@ -208,11 +208,11 @@
           </v-col>
           <v-dialog
             v-model="dialog1"
-            class="ml-150"
+            :width="$vuetify.display.mdAndUp ? 600 : 300"
           >
             <v-card
               flat
-              width="600"
+              :width="$vuetify.display.mdAndUp ? 600 : 300"
             >
               <v-img
                 aspect-ratio="16/9"
@@ -224,11 +224,11 @@
           </v-dialog>
           <v-dialog
             v-model="dialog2"
-            class="ml-150"
+            :width="$vuetify.display.mdAndUp ? 600 : 300"
           >
             <v-card
               flat
-              width="600"
+              :width="$vuetify.display.mdAndUp ? 600 : 300"
             >
               <v-img
                 aspect-ratio="16/9"
@@ -240,11 +240,11 @@
           </v-dialog>
           <v-dialog
             v-model="dialog3"
-            class="ml-150"
+            :width="$vuetify.display.mdAndUp ? 600 : 300"
           >
             <v-card
               flat
-              width="600"
+              :width="$vuetify.display.mdAndUp ? 600 : 300"
             >
               <v-img
                 aspect-ratio="16/9"
@@ -279,7 +279,7 @@
             aspect-ratio="16/9"
             class="rounded-xl mx-auto"
             cycle
-            max-height="800"
+            :height="$vuetify.display.mdAndUp ? 750 : 250"
             height="fit-content"
             progress="primary"
             show-arrows="hover"
@@ -364,7 +364,7 @@
             <v-carousel
               class="rounded-xl mx-auto"
               cycle
-              height="fit-content"
+              :height="$vuetify.display.mdAndUp ? 650 : 250"
               hide-delimiters
               progress="primary"
               show-arrows="hover"
@@ -565,6 +565,27 @@
             </v-divider>
           </v-col>
         </v-row>
+
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col
+            cols="12"
+            sm="6"
+            md="4"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d669.154127078746!2d107.66899595119986!3d-6.917652982295999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e78b66eecc11%3A0x6d195f5f0829301c!2sPT%20PERMATA%20JAYA%20TEHNIK%2FDAFFA%20TOURS!5e1!3m2!1sen!2sid!4v1773024067406!5m2!1sen!2sid"
+              width="100%"
+              :height="$vuetify.display.mdAndUp ? 350 : 150"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              class="rounded-xl shadow-lg mb-6"
+            ></iframe>
+          </v-col>
+        </v-row>
         <v-row
           align="center"
           justify="center"
@@ -584,7 +605,7 @@
               <p
                 class="text-caption text-md-body-1 italic font-mono leading-relaxed"
               >
-                RUKOBUMIMASKENCANA <br />
+                RUKO BUMI MAS KENCANA <br />
                 JL. TERUSAN JAKARTA, RUKO PURI DAGO <br />
                 KAV B NO.6 RT007 RW015 SUKAMISKIN <br />
                 ARCAMANIK, KOTA BANDUNG-40291 <br />
