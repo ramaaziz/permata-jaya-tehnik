@@ -56,7 +56,7 @@
           </v-row>
         </v-card>
 
-        <div class="mb-8 mt-8 text-center w-full">
+        <div class="mb-8 mt-8 text-left w-full">
           <h1 class="text-2xl font-heading font-bold">Visi</h1>
           <div class="font-bold text-lg -mb-1">
             PT PERMATA JAYA TEHNIK menjadi mitra kerja terpercaya
@@ -285,55 +285,11 @@
             width="fit-content"
           >
             <v-carousel-item
+              v-for="(image, index) in projectImages"
+              :key="index"
               contain
-              src="@/assets/project1.jpeg"
+              :src="image"
             ></v-carousel-item>
-
-            <v-carousel-item
-              contain
-              src="@/assets/project2.jpeg"
-            ></v-carousel-item>
-
-            <v-carousel-item
-              contain
-              src="@/assets/project3.jpeg"
-            ></v-carousel-item>
-
-            <v-carousel-item
-              cover
-              src="@/assets/project4.jpeg"
-            >
-            </v-carousel-item>
-
-            <v-carousel-item
-              class="object-cover"
-              src="@/assets/project5.jpeg"
-            >
-            </v-carousel-item>
-
-            <v-carousel-item
-              contain
-              src="@/assets/project6.jpeg"
-            >
-            </v-carousel-item>
-
-            <v-carousel-item
-              contain
-              src="@/assets/project7.jpeg"
-            >
-            </v-carousel-item>
-
-            <v-carousel-item
-              contain
-              src="@/assets/project8.jpeg"
-            >
-            </v-carousel-item>
-
-            <v-carousel-item
-              contain
-              src="@/assets/project9.jpeg"
-            >
-            </v-carousel-item>
           </v-carousel>
         </v-row>
 
@@ -361,13 +317,12 @@
         >
           <v-col cols="4">
             <v-carousel
-              class="rounded-xl mx-auto"
+              class="rounded-xl mx-0"
               cycle
               :height="$vuetify.display.mdAndUp ? 650 : 250"
               hide-delimiters
               progress="primary"
               show-arrows="hover"
-              width="fit-content"
             >
               <v-carousel-item
                 contain
@@ -623,6 +578,15 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
+import project1 from "@/assets/project1.jpeg";
+import project2 from "@/assets/project2.jpeg";
+import project3 from "@/assets/project3.jpeg";
+import project4 from "@/assets/project4.jpeg";
+import project5 from "@/assets/project5.jpeg";
+import project6 from "@/assets/project6.jpeg";
+import project7 from "@/assets/project7.jpeg";
+import project8 from "@/assets/project8.jpeg";
+import project9 from "@/assets/project9.jpeg";
 
 const dialog1 = ref(false);
 const dialog2 = ref(false);
@@ -634,4 +598,15 @@ const scrollToBottom = () => {
     easing: "easeInOutCubic",
   });
 };
+const projectImages = [
+  project1,
+  project2,
+  project3,
+  project4,
+  project5,
+  project6,
+  project7,
+  project8,
+  project9,
+];
 </script>
