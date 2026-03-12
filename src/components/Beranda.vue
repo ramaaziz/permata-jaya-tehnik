@@ -256,6 +256,30 @@
           </v-dialog>
         </v-row>
 
+        <v-row
+          class="m-4"
+          justify="center"
+        >
+          <v-col
+            cols="12"
+            md="4"
+          >
+            <profileCard></profileCard>
+          </v-col>
+          <v-col
+            cols="12"
+            md="4"
+          >
+            <profileCard></profileCard>
+          </v-col>
+          <v-col
+            cols="12"
+            md="4"
+          >
+            <profileCard></profileCard>
+          </v-col>
+        </v-row>
+
         <v-row class="text-left">
           <v-col
             class="text-left ml-4 mb-6 mt-12"
@@ -275,22 +299,11 @@
         </v-row>
 
         <v-row class="text-left mx-4 mb-6 mt-4">
-          <v-carousel
-            aspect-ratio="16/9"
-            class="rounded-xl mx-auto"
-            cycle
-            :height="$vuetify.display.mdAndUp ? 750 : 250"
-            progress="primary"
-            show-arrows="hover"
-            width="fit-content"
-          >
-            <v-carousel-item
-              v-for="(image, index) in projectImages"
-              :key="index"
-              contain
-              :src="image"
-            ></v-carousel-item>
-          </v-carousel>
+          <CustomCaraousel
+            :images="projectImages"
+            :desktop-height="750"
+            :mobile-height="250"
+          ></CustomCaraousel>
         </v-row>
 
         <v-row class="text-left">
@@ -578,6 +591,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
+import CustomCaraousel from "@/components/carousel.vue";
+import profileCard from "@/components/profileCard.vue";
 import project1 from "@/assets/project1.jpeg";
 import project2 from "@/assets/project2.jpeg";
 import project3 from "@/assets/project3.jpeg";
