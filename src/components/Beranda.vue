@@ -123,11 +123,11 @@
             cols="4"
           >
             <projectCard
-              title="Penanganan Tower Kritis"
-              subtitle="Penanganan Tower Kritis UPT Probolinggo"
+              title="Pekerjaan Ipal"
+              subtitle="Pekerjaan Ipan dan Septic Tank UPT Surabaya"
               description="Dokumentasi lengkap pengerjaan "
               icon="mdi-crane"
-              :project-images="projectImages"
+              :project-images="projectImages3"
             >
             </projectCard>
           </v-col>
@@ -490,6 +490,10 @@ const projectImgObj2 = import.meta.glob("@/assets/penggantianGresik/*", {
   eager: true,
   import: "default",
 });
+const projectImgObj3 = import.meta.glob("@/assets/ipalSby/*", {
+  eager: true,
+  import: "default",
+});
 const teamImgObj = import.meta.glob("@/assets/team/*", {
   eager: true,
   import: "default",
@@ -506,6 +510,7 @@ const scrollToBottom = () => {
 };
 const projectImages = Object.values(projectImgObj);
 const projectImages2 = Object.values(projectImgObj2);
+const projectImages3 = Object.values(projectImgObj3);
 const teamImages = Object.values(teamImgObj);
 </script>
 
