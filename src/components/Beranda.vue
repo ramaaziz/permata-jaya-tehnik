@@ -70,6 +70,69 @@
             terbaik
           </div>
         </div>
+
+        <v-row class="text-left">
+          <v-col
+            class="text-left ml-4 mb-6 mt-12"
+            cols="12"
+          >
+            <h2 class="text-h4 font-weight-black uppercase tracking-widest">
+              Project Experience & Milestones
+            </h2>
+            <v-divider
+              class="mt-2"
+              color="info"
+              thickness="4"
+              width="310"
+            >
+            </v-divider>
+          </v-col>
+        </v-row>
+
+        <v-row class="text-left mx-4 mb-6 mt-4">
+          <v-col
+            class="text-left mb-6"
+            cols="4"
+          >
+            <projectCard
+              title="Penanganan Tower Kritis"
+              subtitle="Penanganan Tower Kritis UPT Probolinggo"
+              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              icon="mdi-crane"
+              :project-images="projectImages"
+            >
+            </projectCard>
+          </v-col>
+
+          <v-col
+            class="text-left mb-6"
+            cols="4"
+          >
+            <projectCard
+              title="Penanganan Tower Kritis"
+              subtitle="Penanganan Tower Kritis UPT Probolinggo"
+              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              icon="mdi-crane"
+              :project-images="projectImages"
+            >
+            </projectCard>
+          </v-col>
+
+          <v-col
+            class="text-left mb-6"
+            cols="4"
+          >
+            <projectCard
+              title="Penanganan Tower Kritis"
+              subtitle="Penanganan Tower Kritis UPT Probolinggo"
+              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              icon="mdi-crane"
+              :project-images="projectImages"
+            >
+            </projectCard>
+          </v-col>
+        </v-row>
+
         <v-row class="text-left">
           <v-col
             class="text-left ml-4 mb-6"
@@ -286,48 +349,6 @@
             cols="12"
           >
             <h2 class="text-h4 font-weight-black uppercase tracking-widest">
-              Project Experience & Milestones
-            </h2>
-            <v-divider
-              class="mt-2"
-              color="info"
-              thickness="4"
-              width="310"
-            >
-            </v-divider>
-          </v-col>
-        </v-row>
-
-        <v-row class="text-left mx-4 mb-6 mt-4">
-          <v-col
-            class="text-left ml-4 mb-6 mt-12"
-            cols="4"
-          >
-            <projectCard
-              title="Project A"
-              subtitle="Pekerjaan Konstruksi"
-              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
-              icon="mdi-crane"
-              :project-images="imagesA"
-            >
-            </projectCard>
-
-            <CustomCaraousel
-              :images="projectImages"
-              :desktop-height="550"
-              :mobile-height="250"
-              contain
-              class="d-flex align-center justify-center"
-            ></CustomCaraousel>
-          </v-col>
-        </v-row>
-
-        <v-row class="text-left">
-          <v-col
-            class="text-left ml-4 mb-6 mt-12"
-            cols="12"
-          >
-            <h2 class="text-h4 font-weight-black uppercase tracking-widest">
               Our Team & Expertise
             </h2>
             <v-divider
@@ -420,6 +441,34 @@
               </p>
             </div>
           </v-col>
+        </v-row>
+        <v-row class="align-center justify-center">
+          <v-col cols="1">
+            <v-img
+              src="@/assets/logo/logoISO9001.png"
+              width="70"
+            ></v-img>
+          </v-col>
+          <v-col cols="1">
+            <v-img
+              src="@/assets/logo/logoISO14001.png"
+              width="70"
+            ></v-img>
+          </v-col>
+          <v-col cols="1">
+            <v-img
+              src="@/assets/logo/logoISO45001.png"
+              width="67"
+            ></v-img>
+          </v-col>
+        </v-row>
+        <v-row
+          class="d-flex align-center justify-center ga-2 flex-wrap flex-grow-1 py-3"
+        >
+          <div class="flex-1-0-100 text-center mt-2">
+            {{ new Date().getFullYear() }} —
+            <strong>PERMATA JAYA TEHNIK</strong>
+          </div>
         </v-row>
       </div>
     </v-main>

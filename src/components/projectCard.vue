@@ -34,14 +34,14 @@
 
     <v-dialog
       v-model="dialog"
-      max-width="900"
+      max-width="400"
     >
       <v-card
         rounded="xl"
         class="pa-4"
       >
-        <v-card-title class="d-flex justify-space-between align-center">
-          {{ title }} Documentation
+        <v-card-title class="d-flex justify-space-between align-center pl-13">
+          {{ title }}
           <v-btn
             icon="mdi-close"
             variant="text"
@@ -51,7 +51,7 @@
 
         <CustomCaraousel
           :images="projectImages"
-          :desktop-height="550"
+          :desktop-height="600"
           :mobile-height="300"
         />
       </v-card>
@@ -74,3 +74,22 @@ defineProps({
 
 const dialog = ref(false);
 </script>
+
+<style scoped>
+/* Forces the image wrapper to use flex centering */
+:deep(.v-img__placeholder),
+:deep(.v-img__img) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  /* This ensures the image doesn't just sit at the top of its container */
+  position: relative !important;
+  margin: auto !important;
+}
+
+/* Optional: Add a subtle background color so the empty 
+   space around landscape images looks intentional */
+:deep(.v-carousel__controls) {
+  background: rgba(0, 0, 0, 0.2);
+}
+</style>
