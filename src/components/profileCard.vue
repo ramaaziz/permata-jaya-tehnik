@@ -7,7 +7,7 @@
     <v-row>
       <v-col>
         <v-img
-          src="@/assets/team1.jpg"
+          src="@/assets/team/team1.jpg"
           alt="Profile Image"
           height="200"
           contain

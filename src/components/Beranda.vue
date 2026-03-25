@@ -264,7 +264,7 @@
             cols="12"
             md="4"
           >
-            <profileCard></profileCard>
+            <!-- <profileCard></profileCard>
           </v-col>
           <v-col
             cols="12"
@@ -276,7 +276,7 @@
             cols="12"
             md="4"
           >
-            <profileCard></profileCard>
+            <profileCard></profileCard> -->
           </v-col>
         </v-row>
 
@@ -299,11 +299,27 @@
         </v-row>
 
         <v-row class="text-left mx-4 mb-6 mt-4">
-          <CustomCaraousel
-            :images="projectImages"
-            :desktop-height="750"
-            :mobile-height="250"
-          ></CustomCaraousel>
+          <v-col
+            class="text-left ml-4 mb-6 mt-12"
+            cols="4"
+          >
+            <projectCard
+              title="Project A"
+              subtitle="Pekerjaan Konstruksi"
+              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              icon="mdi-crane"
+              :project-images="imagesA"
+            >
+            </projectCard>
+
+            <CustomCaraousel
+              :images="projectImages"
+              :desktop-height="550"
+              :mobile-height="250"
+              contain
+              class="d-flex align-center justify-center"
+            ></CustomCaraousel>
+          </v-col>
         </v-row>
 
         <v-row class="text-left">
@@ -329,189 +345,12 @@
           justify="center"
         >
           <v-col cols="4">
-            <v-carousel
+            <CustomCaraousel
+              :images="teamImages"
+              :desktop-height="570"
+              :mobile-height="250"
               class="rounded-xl mx-0"
-              cycle
-              :height="$vuetify.display.mdAndUp ? 650 : 250"
-              hide-delimiters
-              progress="primary"
-              show-arrows="hover"
-            >
-              <v-carousel-item
-                contain
-                src="@/assets/team2.jpg"
-              ></v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team1.jpg"
-              ></v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team3.jpg"
-              ></v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team4.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team5.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team6.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team7.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team8.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team9.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team10.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team11.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team12.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team13.jpg"
-              ></v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team14.jpg"
-              ></v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team15.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team16.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team17.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team18.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team19.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team20.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team21.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team22.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team23.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team24.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team25.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team26.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team27.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team28.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team29.jpg"
-              >
-              </v-carousel-item>
-
-              <v-carousel-item
-                contain
-                src="@/assets/team30.jpg"
-              >
-              </v-carousel-item>
-            </v-carousel>
+            ></CustomCaraousel>
           </v-col>
         </v-row>
 
@@ -571,7 +410,6 @@
               <p
                 class="text-caption text-md-body-1 italic font-mono leading-relaxed mb-10"
               >
-                RUKO BUMI MAS KENCANA <br />
                 JL. TERUSAN JAKARTA, RUKO PURI DAGO <br />
                 KAV B NO.6 RT007 RW015 SUKAMISKIN <br />
                 ARCAMANIK, KOTA BANDUNG-40291 <br />
@@ -592,17 +430,17 @@
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
 import CustomCaraousel from "@/components/carousel.vue";
-import profileCard from "@/components/profileCard.vue";
-import project1 from "@/assets/project1.jpeg";
-import project2 from "@/assets/project2.jpeg";
-import project3 from "@/assets/project3.jpeg";
-import project4 from "@/assets/project4.jpeg";
-import project5 from "@/assets/project5.jpeg";
-import project6 from "@/assets/project6.jpeg";
-import project7 from "@/assets/project7.jpeg";
-import project8 from "@/assets/project8.jpeg";
-import project9 from "@/assets/project9.jpeg";
+// import profileCard from "@/components/profileCard.vue";
+import projectCard from "@/components/projectCard.vue";
 
+const projectImgObj = import.meta.glob("@/assets/penangananTower/*", {
+  eager: true,
+  import: "default",
+});
+const teamImgObj = import.meta.glob("@/assets/team/*", {
+  eager: true,
+  import: "default",
+});
 const dialog1 = ref(false);
 const dialog2 = ref(false);
 const dialog3 = ref(false);
@@ -613,15 +451,25 @@ const scrollToBottom = () => {
     easing: "easeInOutCubic",
   });
 };
-const projectImages = [
-  project1,
-  project2,
-  project3,
-  project4,
-  project5,
-  project6,
-  project7,
-  project8,
-  project9,
-];
+const projectImages = Object.values(projectImgObj);
+const teamImages = Object.values(teamImgObj);
 </script>
+
+<style scoped>
+/* Forces the image wrapper to use flex centering */
+:deep(.v-img__placeholder),
+:deep(.v-img__img) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  /* This ensures the image doesn't just sit at the top of its container */
+  position: relative !important;
+  margin: auto !important;
+}
+
+/* Optional: Add a subtle background color so the empty 
+   space around landscape images looks intentional */
+:deep(.v-carousel__controls) {
+  background: rgba(0, 0, 0, 0.2);
+}
+</style>
