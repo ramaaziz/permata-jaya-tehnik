@@ -95,6 +95,7 @@
             cols="4"
           >
             <projectCard
+              class="mb-6"
               title="Penanganan Tower Kritis"
               subtitle="Penanganan Tower Kritis UPT Probolinggo"
               description="Dokumentasi lengkap pengerjaan "
@@ -102,18 +103,14 @@
               :project-images="projectImages"
             >
             </projectCard>
-          </v-col>
 
-          <v-col
-            class="text-left mb-6"
-            cols="4"
-          >
             <projectCard
-              title="Penggantian Kabel Power"
-              subtitle="Penggantian Kabel Power dan Pembuatan Duct UPT Gresik"
+              class="mb-6"
+              title="Pekerjaan Tower Emergency"
+              subtitle="Pekerjaan Tower Emergency INDORAMA"
               description="Dokumentasi lengkap pengerjaan "
               icon="mdi-crane"
-              :project-images="projectImages2"
+              :project-images="projectImages4"
             >
             </projectCard>
           </v-col>
@@ -123,11 +120,47 @@
             cols="4"
           >
             <projectCard
+              class="mb-6"
+              title="Penggantian Kabel Power"
+              subtitle="Penggantian Kabel Power dan Pembuatan Duct UPT Gresik"
+              description="Dokumentasi lengkap pengerjaan "
+              icon="mdi-crane"
+              :project-images="projectImages2"
+            >
+            </projectCard>
+
+            <projectCard
+              class="mb-6"
+              title="Penggantian Proteksi Relay"
+              subtitle="Penggantian Proteksi Relay UPT Bandung"
+              description="Dokumentasi lengkap pengerjaan "
+              icon="mdi-crane"
+              :project-images="projectImages5"
+            >
+            </projectCard>
+          </v-col>
+
+          <v-col
+            class="text-left mb-6"
+            cols="4"
+          >
+            <projectCard
+              class="mb-6"
               title="Pekerjaan Ipal"
               subtitle="Pekerjaan Ipan dan Septic Tank UPT Surabaya"
               description="Dokumentasi lengkap pengerjaan "
               icon="mdi-crane"
               :project-images="projectImages3"
+            >
+            </projectCard>
+
+            <projectCard
+              class="mb-6"
+              title="Pekerjaan Jumper SUTT"
+              subtitle="Pekerjaan Jumper SUTT Tambun"
+              description="Dokumentasi lengkap pengerjaan "
+              icon="mdi-crane"
+              :project-images="projectImages6"
             >
             </projectCard>
           </v-col>
@@ -494,6 +527,18 @@ const projectImgObj3 = import.meta.glob("@/assets/ipalSby/*", {
   eager: true,
   import: "default",
 });
+const projectImgObj4 = import.meta.glob("@/assets/towerEmergency/*", {
+  eager: true,
+  import: "default",
+});
+const projectImgObj5 = import.meta.glob("@/assets/penggantianRelay/*", {
+  eager: true,
+  import: "default",
+});
+const projectImgObj6 = import.meta.glob("@/assets/jumperSutt/*", {
+  eager: true,
+  import: "default",
+});
 const teamImgObj = import.meta.glob("@/assets/team/*", {
   eager: true,
   import: "default",
@@ -511,6 +556,9 @@ const scrollToBottom = () => {
 const projectImages = Object.values(projectImgObj);
 const projectImages2 = Object.values(projectImgObj2);
 const projectImages3 = Object.values(projectImgObj3);
+const projectImages4 = Object.values(projectImgObj4);
+const projectImages5 = Object.values(projectImgObj5);
+const projectImages6 = Object.values(projectImgObj6);
 const teamImages = Object.values(teamImgObj);
 </script>
 
