@@ -3,7 +3,7 @@
     border
     class="pa-6 text-center fill-height"
     flat
-    height="250"
+    min-height="250"
     hover
     rounded="xl"
     @click="dialog = true"
@@ -11,7 +11,7 @@
     <v-avatar
       class="mb-4 mt-2"
       :color="iconColor"
-      size="80"
+      :size="smAndDown ? '64' : '80'"
     >
       <v-icon
         color="white"
@@ -51,8 +51,8 @@
 
         <CustomCaraousel
           :images="projectImages"
-          :desktop-height="600"
-          :mobile-height="300"
+          :desktop-height="500"
+          :mobile-height="200"
         />
       </v-card>
     </v-dialog>

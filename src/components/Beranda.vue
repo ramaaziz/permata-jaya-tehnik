@@ -97,7 +97,7 @@
             <projectCard
               title="Penanganan Tower Kritis"
               subtitle="Penanganan Tower Kritis UPT Probolinggo"
-              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              description="Dokumentasi lengkap pengerjaan "
               icon="mdi-crane"
               :project-images="projectImages"
             >
@@ -109,11 +109,11 @@
             cols="4"
           >
             <projectCard
-              title="Penanganan Tower Kritis"
-              subtitle="Penanganan Tower Kritis UPT Probolinggo"
-              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              title="Penggantian Kabel Power"
+              subtitle="Penggantian Kabel Power dan Pembuatan Duct UPT Gresik"
+              description="Dokumentasi lengkap pengerjaan "
               icon="mdi-crane"
-              :project-images="projectImages"
+              :project-images="projectImages2"
             >
             </projectCard>
           </v-col>
@@ -125,7 +125,7 @@
             <projectCard
               title="Penanganan Tower Kritis"
               subtitle="Penanganan Tower Kritis UPT Probolinggo"
-              description="Dokumentasi lengkap pengerjaan pondasi dan infrastruktur utama."
+              description="Dokumentasi lengkap pengerjaan "
               icon="mdi-crane"
               :project-images="projectImages"
             >
@@ -486,6 +486,10 @@ const projectImgObj = import.meta.glob("@/assets/penangananTower/*", {
   eager: true,
   import: "default",
 });
+const projectImgObj2 = import.meta.glob("@/assets/penggantianGresik/*", {
+  eager: true,
+  import: "default",
+});
 const teamImgObj = import.meta.glob("@/assets/team/*", {
   eager: true,
   import: "default",
@@ -501,6 +505,7 @@ const scrollToBottom = () => {
   });
 };
 const projectImages = Object.values(projectImgObj);
+const projectImages2 = Object.values(projectImgObj2);
 const teamImages = Object.values(teamImgObj);
 </script>
 
