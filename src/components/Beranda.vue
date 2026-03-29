@@ -427,11 +427,14 @@
           align="center"
           justify="center"
         >
-          <v-col cols="4">
+          <v-col
+            cols="8"
+            md="4"
+          >
             <CustomCaraousel
               :images="teamImages"
               :desktop-height="570"
-              :mobile-height="250"
+              :mobile-height="350"
               class="rounded-xl mx-0"
             ></CustomCaraousel>
           </v-col>
