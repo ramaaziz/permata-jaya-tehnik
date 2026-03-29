@@ -25,7 +25,6 @@
           rounded="3xl"
           :height="$vuetify.display.mdAndUp ? 450 : 150"
         >
-          >
           <v-row
             align="center"
             class="ma-0 fill-height"
@@ -43,7 +42,7 @@
                 </h2>
 
                 <p
-                  class="text-sm text-md-md italic font-mono font-medium leading-relaxed hidden-sm-and-down"
+                  class="text-[8px] text-md-xs italic font-mono font-medium leading-relaxed hidden-sm-and-down"
                 >
                   Menghubungkan Energi, Membangun Negeri.<br />
                   Kami adalah mitra terpercaya dalam bidang<br />
@@ -55,21 +54,33 @@
             </v-col>
           </v-row>
         </v-card>
-
-        <div class="mb-8 mt-8 text-left w-full">
-          <h1 class="text-2xl font-heading font-bold">Visi</h1>
-          <div class="font-bold text-lg -mb-1">
-            PT PERMATA JAYA TEHNIK menjadi mitra kerja terpercaya
-          </div>
-          <h1 class="mt-8 text-2xl font-heading font-bold">Misi</h1>
-          <div class="font-bold text-lg -mb-1">
-            Menempatkan kepuasan mitra sebagai komitmen utama
-          </div>
-          <div class="font-bold text-lg mb-20">
-            Memberikan kenyamanan terhadap pelanggan dengan memberikan qualitas
-            terbaik
-          </div>
-        </div>
+        <v-row>
+          <v-col cols="8">
+            <div class="my-8 mx-4 text-left w-full">
+              <h1 class="text-lg font-heading font-bold sm:text-2xl">Visi</h1>
+              <div class="font-bold text-xs sm:text-lg -mb-1">
+                PT PERMATA JAYA TEHNIK menjadi mitra kerja terpercaya
+              </div>
+              <h1 class="mt-8 text-lg font-heading font-bold sm:text-2xl">
+                Misi
+              </h1>
+              <div class="font-bold text-xs sm:text-lg -mb-1">
+                Menempatkan kepuasan mitra sebagai komitmen utama
+              </div>
+              <div class="font-bold text-xs sm:text-lg sm:mb-0">
+                Memberikan kenyamanan terhadap pelanggan dengan memberikan
+                qualitas terbaik
+              </div>
+            </div>
+          </v-col>
+          <v-col>
+            <v-img
+              class="pt-8"
+              src="@/assets/logo-pjt.png"
+              :width="$vuetify.display.mdAndDown ? '150' : '250'"
+            ></v-img>
+          </v-col>
+        </v-row>
 
         <v-row class="text-left">
           <v-col
@@ -352,6 +363,24 @@
           </v-dialog>
         </v-row>
 
+        <v-row class="text-left">
+          <v-col
+            class="text-left ml-4 mb-6 mt-12"
+            cols="12"
+          >
+            <h2 class="text-h4 font-weight-black uppercase tracking-widest">
+              Our Board of Directors
+            </h2>
+            <v-divider
+              class="mt-2"
+              color="info"
+              thickness="4"
+              width="310"
+            >
+            </v-divider>
+          </v-col>
+        </v-row>
+
         <v-row
           class="m-4"
           justify="center"
@@ -360,7 +389,7 @@
             cols="12"
             md="4"
           >
-            <!-- <profileCard></profileCard>
+            <profileCard></profileCard>
           </v-col>
           <v-col
             cols="12"
@@ -372,7 +401,7 @@
             cols="12"
             md="4"
           >
-            <profileCard></profileCard> -->
+            <profileCard></profileCard>
           </v-col>
         </v-row>
 
@@ -512,7 +541,7 @@
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
 import CustomCaraousel from "@/components/carousel.vue";
-// import profileCard from "@/components/profileCard.vue";
+import profileCard from "@/components/profileCard.vue";
 import projectCard from "@/components/projectCard.vue";
 
 const projectImgObj = import.meta.glob("@/assets/penangananTower/*", {

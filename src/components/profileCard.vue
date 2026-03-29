@@ -11,15 +11,15 @@
           alt="Profile Image"
           height="200"
           contain
+          class="py-6 px-2 rounded"
         ></v-img>
       </v-col>
-      <v-col>
-        <v-card-title>John Doe</v-card-title>
-        <v-card-subtitle>Software Engineer</v-card-subtitle>
+      <v-col class="py-4">
+        <v-card-title class="py-1">John Doe</v-card-title>
+        <v-card-subtitle class="py-1">Software Engineer</v-card-subtitle>
         <v-card-text>
-          John is a highly skilled software engineer with over 10 years of
-          experience in the industry. He has a strong background in web
-          development and is proficient in multiple programming languages.
+          lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt
         </v-card-text>
       </v-col>
     </v-row>

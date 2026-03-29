@@ -3,7 +3,7 @@
     border
     class="pa-6 text-center fill-height"
     flat
-    min-height="250"
+    :min-height="smAndDown ? '150' : '250'"
     hover
     rounded="xl"
     @click="dialog = true"
@@ -15,20 +15,28 @@
     >
       <v-icon
         color="white"
-        size="40"
+        :size="smAndDown ? '30' : '40'"
         >{{ icon }}</v-icon
       >
     </v-avatar>
 
-    <v-card-title class="text-h5 font-weight-bold justify-center">
+    <v-card-title
+      :class="[
+        'font-weight-bold justify-center px-0',
+        smAndDown ? 'text-xs' : 'text-h5',
+      ]"
+    >
       {{ title }}
     </v-card-title>
 
-    <v-card-subtitle class="mt-2 text-wrap">
+    <v-card-subtitle
+      class="mt-2 text-wrap"
+      :class="smAndDown ? 'text-[8px]' : 'text-caption'"
+    >
       {{ subtitle }}
     </v-card-subtitle>
 
-    <v-card-text class="text-body-2 px-2 pb-2">
+    <v-card-text class="text-body-2 px-2 pb-2 hidden md:block">
       {{ description }}
     </v-card-text>
 
@@ -40,11 +48,17 @@
         rounded="xl"
         class="pa-4"
       >
-        <v-card-title class="d-flex justify-space-between align-center pl-13">
-          {{ title }}
+        <v-card-title class="text-center position-relative py-4">
+          <span
+            :class="smAndDown ? 'text-xs' : 'text-h6'"
+            class="font-weight-bold"
+          >
+            {{ title }}
+          </span>
           <v-btn
             icon="mdi-close"
             variant="text"
+            :density="smAndDown ? 'compact' : 'default'"
             @click="dialog = false"
           ></v-btn>
         </v-card-title>
@@ -52,7 +66,7 @@
         <CustomCaraousel
           :images="projectImages"
           :desktop-height="500"
-          :mobile-height="200"
+          :mobile-height="400"
         />
       </v-card>
     </v-dialog>
@@ -62,6 +76,7 @@
 <script setup>
 import { ref } from "vue";
 import CustomCaraousel from "./carousel.vue";
+import { useDisplay } from "vuetify";
 
 defineProps({
   title: String,
@@ -71,6 +86,7 @@ defineProps({
   iconColor: { type: String, default: "blue-darken-4" },
   projectImages: Array, // Pass the array of images here
 });
+const { smAndDown } = useDisplay();
 
 const dialog = ref(false);
 </script>
